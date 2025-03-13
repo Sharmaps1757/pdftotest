@@ -1,0 +1,161 @@
+/* index.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-bg-primary: #000000;
+  --color-bg-secondary: #111111;
+  --color-accent-primary: #8b5cf6;
+  --color-accent-secondary: #6d28d9;
+  --color-text-primary: #ffffff;
+  --color-text-secondary: #d1d5db;
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: var(--color-bg-primary);
+  color: var(--color-text-primary);
+}
+
+.app-container {
+  min-height: 100vh;
+}
+
+/* Navbar Styles */
+.navbar {
+  background-color: rgba(17, 17, 17, 0.8);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(75, 75, 75, 0.3);
+}
+
+/* Cards and Containers */
+.section-card, 
+.question-container {
+  background-color: rgba(24, 24, 27, 0.8);
+  backdrop-filter: blur(8px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(75, 75, 75, 0.2);
+  transition: all 0.3s ease;
+}
+
+.section-card:hover {
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.4);
+  border-color: rgba(139, 92, 246, 0.3);
+}
+
+/* Buttons */
+button {
+  transition: all 0.2s ease;
+}
+
+button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Form Elements */
+input, select, textarea {
+  background-color: rgba(30, 30, 30, 0.8);
+  border: 1px solid rgba(75, 75, 75, 0.3);
+  color: var(--color-text-primary);
+  transition: all 0.2s ease;
+}
+
+input:focus, select:focus, textarea:focus {
+  border-color: var(--color-accent-primary);
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(139, 92, 246, 0.2);
+}
+
+/* Test Taking Interface */
+.sidebar {
+  border-right: 1px solid rgba(75, 75, 75, 0.3);
+  background-color: rgba(10, 10, 10, 0.95);
+}
+
+.time-left {
+  background: linear-gradient(to right, #4b5563, #1f2937);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Loading Spinner */
+.loader {
+  border: 4px solid rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  border-top: 4px solid var(--color-accent-primary);
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Gradients and Accents */
+.gradient-bg {
+  background: linear-gradient(to right, #4f46e5, #7c3aed, #c026d3);
+}
+
+.accent-border {
+  border-image: linear-gradient(to right, #4f46e5, #7c3aed) 1;
+}
+
+/* Dashboard Cards */
+.dashboard-card {
+  background-color: rgba(24, 24, 27, 0.8);
+  border-radius: 0.5rem;
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(75, 75, 75, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.dashboard-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* Dashboard Statistics */
+.stat-value {
+  background: linear-gradient(to right, #8b5cf6, #6d28d9);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  font-weight: bold;
+}
+
+/* Create Test Page */
+.create-test-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+/* Test List Page */
+.test-list-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+/* Login/Register Pages */
+.auth-container {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.auth-form {
+  background-color: rgba(24, 24, 27, 0.8);
+  backdrop-filter: blur(8px);
+  border-radius: 0.5rem;
+  padding: 2rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
